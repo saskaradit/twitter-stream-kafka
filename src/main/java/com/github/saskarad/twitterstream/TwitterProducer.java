@@ -66,7 +66,7 @@ public class TwitterProducer {
                     @Override
                     public void onCompletion(RecordMetadata recordMetadata, Exception e) {
                         if (e != null){
-                            logger.error("Somtthing bad happenned", e);
+                            logger.error("Something bad happened", e);
                         }
                     }
                 });
