@@ -9,5 +9,8 @@
         <module name="kafka-twitter-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafka-elasticsearch-consumer" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
