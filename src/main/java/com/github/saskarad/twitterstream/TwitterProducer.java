@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 public class TwitterProducer {
     public TwitterProducer(){}
     Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
-    List<String> terms = Lists.newArrayList("engineering","software engineer", "kafka");
 
 
     public static void main(String[] args) {
@@ -25,9 +24,12 @@ public class TwitterProducer {
         logger.info("Setup");
         /** Set up your blocking queues: Be sure to size these properly based on expected TPS of your stream */
         BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(1000);
+
         // create twitter client
+        List<String> terms = Lists.newArrayList("engineering","software engineer", "kafka");
         Client client = TwitterClient.createTwitterClient(msgQueue,terms);
         client.connect();
+
         // create kafka producer
         KafkaProducer<String,String> producer = Producer.createProducer();
 

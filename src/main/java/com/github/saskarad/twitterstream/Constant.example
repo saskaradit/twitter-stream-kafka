@@ -1,0 +1,10 @@
+package com.github.saskarad.twitterstream;
+
+public class Constant {
+    public static final String CONSUMER_KEY = "twitter-key";
+    public static final String CONSUMER_SECRET = "twitter-secret";
+    public static final String TOKEN ="token";
+    public static final String SECRET = "secret";
+}
+
+// change file type to .java
